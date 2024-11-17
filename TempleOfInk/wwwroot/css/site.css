@@ -10,17 +10,15 @@ html {
     }
 }
 
-html {
-    position: relative;
-    min-height: 100%;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
+html, body {
     margin: 0;
+    padding: 0;
+    min-height: 100%; /* Asegura que el contenido siempre ocupe al menos el 100% de la altura */
     background-color: #1E1E1E;
     color: white;
-    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
 }
 
 * {
@@ -114,14 +112,19 @@ body {
     }
 }
 
+.main-content {
+    flex-grow: 1; /* Hace que el contenido ocupe el espacio disponible y empuje el footer hacia abajo */
+    padding-bottom: 50px; /* Asegura que el contenido no quede cubierto por el footer */
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté encima del footer */
+}
+
 .footer {
     background: url('/media/Tattoo_footer.jpg') no-repeat center center/cover;
-    padding: 10px 0; /* Reduce el padding vertical */
+    padding: 5px 0; /* Reducir el padding vertical */
     color: white;
     width: 100%;
-    position: relative;
-    bottom: 0;
-    margin-top: auto;
+    text-align: center;
 }
 
 .footer-container {
@@ -129,15 +132,17 @@ body {
     justify-content: center; /* Centra los elementos del contenedor */
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center; /* Centra el contenido dentro del contenedor */
+    padding: 0 10px; /* Espacio a los lados */
 }
 
 .footer-column {
     width: 30%;
+    padding: 3px; /* Reducir espacio interno de las columnas */
 }
 
     .footer-column h3 {
-        margin-bottom: 5px;
+        font-size: 16px; /* Reducir tamaño de fuente */
+        margin-bottom: 5px; /* Menos espacio debajo de los títulos */
         text-align: center; /* Centra los títulos */
     }
 
@@ -148,13 +153,14 @@ body {
     }
 
         .footer-column ul li {
-            margin-bottom: 5px; /* Reduce espacio entre elementos */
+            margin-bottom: -1px; /* Reducir espacio entre elementos */
         }
 
             .footer-column ul li a {
                 color: white;
                 text-decoration: none; /* Elimina la decoración */
                 text-align: center;
+                font-size: 14px; /* Reducir tamaño de fuente */
             }
 
                 .footer-column ul li a:hover {
@@ -164,9 +170,11 @@ body {
 .footer-copyright {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    margin-top: 5px; /* Reduce espacio superior */
+    margin-top: 2px; /* Reducir espacio superior */
+    padding: 2px 0; /* Reducir padding */
     text-align: center; /* Centra el texto */
     width: 100%;
+    font-size: 12px; /* Reducir tamaño de fuente */
     text-decoration: none; /* Elimina decoración */
 }
 

@@ -1,5 +1,109 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿#contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 20px 100px; /* Aumenté el padding inferior para más espacio */
+}
+
+.filtros {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    .filtros ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .filtros li {
+        display: inline-block;
+    }
+
+    .filtros button {
+        background-color: #DA0037;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .filtros button:hover {
+            background-color: #BE3144;
+        }
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+    .galeria .imagen {
+        flex: 1 1 calc(20% - 15px);
+        max-width: calc(20% - 15px);
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .galeria img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .galeria .imagen:hover img {
+        transform: scale(1.1);
+    }
+
+.imagen-expandida {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Sombra para abarcar toda la página */
+}
+
+.controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 10; /* Asegura que los botones estén sobre la imagen */
+}
+
+.zoom-btn, .cerrar {
+    background-color: rgba(255, 255, 255, 0.2); /* Blanco con opacidad */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+    .zoom-btn:hover, .cerrar:hover {
+        background-color: rgba(255, 255, 255, 0.5); /* Blanco semi-transparente en hover */
+    }
+
+#imgExpandida {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Mantiene la proporción de la imagen */
 }
