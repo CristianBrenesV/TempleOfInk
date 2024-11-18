@@ -27,7 +27,10 @@ namespace TempleOfInk.Controllers
         {
             return View();
         }
-
+        public IActionResult RegistroUsuario()
+        {
+            return View();
+        }
         public IActionResult Galeria()
         {
             return View();

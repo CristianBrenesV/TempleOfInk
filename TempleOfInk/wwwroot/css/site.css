@@ -67,6 +67,45 @@ html, body {
                 display: none !important;
             }
 }
+/* Estilo para el dropdown */
+.navbar-nav .nav-item.dropdown {
+    position: relative; /* Para que los submenús se alineen correctamente */
+}
+
+.navbar-nav .nav-item .dropdown-toggle {
+    color: white; /* Asegura que el icono de perfil se vea bien */
+    font-weight: 500;
+    padding: 8px 10px; /* Añade espacio alrededor del icono */
+    border-radius: 4px; /* Opcional, para bordes redondeados */
+}
+
+    .navbar-nav .nav-item .dropdown-toggle:hover {
+        background-color: #444444; /* Fondo más oscuro al pasar el ratón */
+    }
+
+.navbar-nav .nav-item .dropdown-menu {
+    background-color: #333333; /* Color de fondo del submenú */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 150px; /* Ancho mínimo del submenú */
+}
+
+.navbar-nav .nav-item .dropdown-item {
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado dentro de los elementos del submenú */
+}
+
+    .navbar-nav .nav-item .dropdown-item:hover {
+        background-color: #444444; /* Fondo al pasar el ratón */
+        text-decoration: underline; /* Subraya el texto al pasar el ratón */
+    }
+
+@media (max-width: 767px) {
+    .navbar-nav .nav-item .dropdown-menu {
+        position: static; /* Asegura que el submenú se muestre correctamente en pantallas pequeñas */
+        margin-top: 5px; /* Añade un pequeño margen en dispositivos móviles */
+    }
+}
 
 .main-content {
     flex-grow: 1; /* Hace que el contenido ocupe el espacio disponible y empuje el footer hacia abajo */
@@ -143,38 +182,3 @@ html, body {
             text-decoration: none; /* Mantiene sin decoración al pasar el ratón */
         }
 
-/* Estilo global para las migas de pan */
-.breadcrumbs {
-    background-image: url('~/media/fondo.jpg'); /* Ajusta la ruta de la imagen de fondo */
-    background-size: cover;
-    background-position: center; /* Asegura que la imagen esté centrada */
-    padding: 20px 0; /* Espaciado alrededor de las migas */
-    text-align: center; /* Centra las migas de pan horizontalmente */
-}
-
-    .breadcrumbs ol {
-        display: inline-flex; /* Centra los elementos */
-        list-style: none;
-        padding-left: 0;
-        margin: 0;
-        color: white; /* Cambia el color del texto */
-    }
-
-    .breadcrumbs li {
-        margin-right: 10px;
-    }
-
-    .breadcrumbs a {
-        color: white;
-        text-decoration: none;
-        font-size: 16px;
-    }
-
-        .breadcrumbs a:hover {
-            text-decoration: underline;
-        }
-
-    .breadcrumbs span {
-        color: white;
-        font-size: 16px;
-    }
