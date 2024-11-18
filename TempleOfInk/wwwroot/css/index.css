@@ -1,0 +1,89 @@
+﻿/* Estilo para el título fuera del slider */
+.testimonial-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px; /* Espacio debajo del título */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra en el título */
+}
+
+.testimonial-slider {
+    width: 100%; /* Ajusta el ancho al 100% de la página */
+    height: 200px; /* Establece una altura fija de 200px */
+    overflow: hidden;
+    position: relative;
+    background: url('/media/Testimonios_img.jpeg') no-repeat center center/cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: white; /* Para que el texto sea legible sobre el fondo */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos del slider verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    padding: 20px;
+}
+
+.testimonial-slide {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+    .testimonial-slide.active {
+        display: block;
+    }
+
+    .testimonial-slide p {
+        font-size: 1.5em; /* Aumenta el tamaño del texto para mejor visibilidad */
+        margin: 0 0 10px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra con 50% de opacidad */
+    }
+
+    .testimonial-slide h4 {
+        font-size: 1.2em; /* Titulo con mayor tamaño */
+        color: #fff;
+        margin: 0;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra con 50% de opacidad */
+    }
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+button {
+    background-color: #DA0037;
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #BE3144;
+    }
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.add-testimonial-button {
+    background-color: #DA0037;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+    .add-testimonial-button:hover {
+        background-color: #BE3144;
+    }

@@ -37,7 +37,7 @@ namespace TempleOfInk.Controllers
         {
             return View();
         }
-        public IActionResult Testimonio()
+        public IActionResult NuevoTestimonio()
         {
             return View();
         }

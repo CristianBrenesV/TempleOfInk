@@ -1,8 +1,42 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider de Testimonios</title>
+    <!-- Referencias a los archivos CSS -->
+    <link rel="stylesheet" href="~/css/index.css">
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>
+    <!-- Título fuera del slider -->
+    <h2 class="testimonial-title">Testimonios de usuarios</h2>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <div class="testimonial-slider">
+        <div class="testimonial-slide active">
+            <p>"Excelente servicio, me encantó el resultado final."</p>
+            <h4>- Juan Pérez</h4>
+        </div>
+        <div class="testimonial-slide">
+            <p>"Un ambiente increíble y los tatuadores son muy profesionales."</p>
+            <h4>- María López</h4>
+        </div>
+        <div class="testimonial-slide">
+            <p>"Totalmente recomendado, el mejor estudio de tatuajes."</p>
+            <h4>- Carlos Díaz</h4>
+        </div>
+        <div class="controls">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <a class="add-testimonial-button" asp-area="" asp-controller="Home" asp-action="Nuevotestimonio">¡Comparte tu experiencia!</a>
+    </div>
+
+
+    <script src="~/js/testimonio.js"></script>
+
+</body>
+</html>

@@ -1,5 +1,41 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo testimonio</title>
+    <link rel="stylesheet" href="~/css/testimonios.css">
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>
+        <form action="/enviar-testimonio" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="testimonio">Testimonio:</label>
+            <textarea id="testimonio" name="testimonio" rows="4" required></textarea>
+
+            <label>Calificación:</label>
+            <div class="stars">
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1">★</label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">★</label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">★</label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">★</label>
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5">★</label>
+            </div>
+
+
+            <button type="submit">Enviar Testimonio</button>
+        </form>
+
+    <script src="~/js/nuevotestimonio.js"></script>
+</body>
+</html>

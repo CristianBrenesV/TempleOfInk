@@ -31,10 +31,11 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
     background-color: #1E1E1E;
     border: none;
     box-shadow: none;
+    padding: 0; /* Elimina el padding extra */
 }
 
     .navbar-nav .nav-item {
@@ -47,19 +48,11 @@ html, body {
             font-weight: 500;
         }
 
-    .navbar-nav img {
-        vertical-align: middle;
-    }
-
 @media (max-width: 767px) {
-    body {
-        background-color: #1E1E1E;
-    }
-
     .navbar-nav {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
         align-items: center;
         background-color: #1E1E1E;
         border: none;
@@ -67,49 +60,12 @@ html, body {
     }
 
         .navbar-nav .nav-item {
-            margin: 0 10px;
+            margin: 5px 10px; /* Ajusta el margen para dispositivos móviles */
         }
 
             .navbar-nav .nav-item:nth-of-type(4) {
                 display: none !important;
             }
-
-    .home-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .home-outside-menu {
-        display: block;
-        width: 100%;
-        text-align: center;
-        color: white;
-    }
-}
-
-@media (min-width: 768px) {
-    .navbar-nav {
-        display: flex;
-        justify-content: center;
-        background-color: #1E1E1E;
-        border: none;
-        box-shadow: none;
-    }
-
-        .navbar-nav .nav-item {
-            margin: 0 10px;
-        }
-
-            .navbar-nav .nav-item:nth-child(4) {
-                order: 0;
-            }
-
-    .home-outside-menu {
-        display: none !important;
-    }
 }
 
 .main-content {
@@ -186,3 +142,39 @@ html, body {
         .footer-copyright a:hover {
             text-decoration: none; /* Mantiene sin decoración al pasar el ratón */
         }
+
+/* Estilo global para las migas de pan */
+.breadcrumbs {
+    background-image: url('~/media/fondo.jpg'); /* Ajusta la ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center; /* Asegura que la imagen esté centrada */
+    padding: 20px 0; /* Espaciado alrededor de las migas */
+    text-align: center; /* Centra las migas de pan horizontalmente */
+}
+
+    .breadcrumbs ol {
+        display: inline-flex; /* Centra los elementos */
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        color: white; /* Cambia el color del texto */
+    }
+
+    .breadcrumbs li {
+        margin-right: 10px;
+    }
+
+    .breadcrumbs a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+    .breadcrumbs span {
+        color: white;
+        font-size: 16px;
+    }
