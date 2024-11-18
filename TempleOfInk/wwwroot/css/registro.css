@@ -1,0 +1,107 @@
+﻿/* Centrado de #contenido */
+#contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegura que el contenedor tenga la altura completa de la ventana */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    margin: 0;
+}
+
+    /* Estilos del formulario dentro de #contenido (más ancho) */
+    #contenido form {
+        width: 100%;
+        max-width: 600px; /* Formulario más ancho */
+        background: #333; /* Fondo del formulario */
+        padding: 40px 60px; /* Aumenta el espacio dentro del formulario */
+        margin: 20px; /* Agrega margen alrededor del formulario */
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+/* Título del formulario */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 2rem;
+}
+
+/* Estilos de los grupos de formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Estilos de las etiquetas */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Estilos de los inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    color: #333;
+    box-sizing: border-box;
+}
+
+    input::placeholder {
+        color: #aaa;
+    }
+
+/* Estilos del contenedor de la contraseña */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos del ícono para mostrar/ocultar la contraseña */
+.show-hide-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+/* Estilos del botón de envío */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #DA0037;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #BE3144;
+    }
+
+/* Estilos del enlace */
+a.label {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+}
+
+    a.label:hover {
+        text-decoration: underline;
+    }

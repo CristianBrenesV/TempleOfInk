@@ -11,4 +11,4 @@ function moveSlide(direction) {
 
 setInterval(() => {
     moveSlide(1);
-}, 15000);  // Cambia cada 15 segundos
+}, 10000);  // Cambia cada 10 segundos

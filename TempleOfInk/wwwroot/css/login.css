@@ -1,1 +1,102 @@
-﻿
+﻿/* Centrado de #contenido */
+#contenido {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea el formulario hacia la parte superior */
+    /*  height: 100vh; */ /* Asegura que el contenedor tenga la altura completa de la ventana */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    margin: 0;
+    padding-top: 30px; /* Añade un pequeño espacio arriba */
+    padding-bottom: 30px; /* Añade espacio abajo */
+}
+
+    /* Estilos del formulario dentro de #contenido */
+    #contenido form {
+        width: 100%;
+        max-width: 400px; /* Máximo ancho para el formulario */
+        background: #333; /* Fondo del formulario */
+        padding: 40px 50px; /* Aumenta el espacio dentro del formulario */
+        margin: 0; /* Elimina el margen estándar */
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+/* Resto del código permanece igual */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    background: #444;
+    color: white;
+    padding-right: 40px; /* Espacio para el ícono dentro del input */
+}
+
+    input::placeholder {
+        color: #bbb;
+    }
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.show-hide-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #DA0037;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #BE3144;
+    }
+
+a.label {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+}
+
+    a.label:hover {
+        text-decoration: underline;
+    }
