@@ -1,5 +1,50 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda artistas</title>
+    <!-- Referencias a los archivos CSS -->
+    <link rel="stylesheet" href="~/css/agenda.css">
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>
+    <div class="cotizacion-container">
+        <input type="text" placeholder="Número de cotización" class="input-cotizacion">
+        <button class="btn-enviar">Enviar</button>
+    </div>
+
+    <div id="agenda">
+        <div class="dias-semana">
+            <button class="navegacion">&lt;</button>
+            <div class="dia" data-dia="Lun">Lun<br>21</div>
+            <div class="dia" data-dia="Mar">Mar<br>22</div>
+            <div class="dia" data-dia="Mier">Mier<br>23</div>
+            <div class="dia" data-dia="Jue">Jue<br>24</div>
+            <div class="dia" data-dia="Vie">Vie<br>25</div>
+            <div class="dia" data-dia="Sab">Sab<br>26</div>
+            <button class="navegacion">&gt;</button>
+        </div>
+        <section class="horarios">
+            <h2>Horarios disponibles</h2>
+            <div class="horas">
+                <div class="hora" data-value="9:00">9:00</div>
+                <div class="hora" data-value="10:00">10:00</div>
+                <div class="hora" data-value="14:00">14:00</div>
+            </div>
+            <h2>Horarios disponibles para miembros</h2>
+            <div class="horas">
+                <div class="hora" data-value="11:00">11:00</div>
+                <div class="hora" data-value="13:00">13:00</div>
+                <div class="hora" data-value="15:00">15:00</div>
+                <div class="hora" data-value="16:00">16:00</div>
+                <div class="hora" data-value="17:00">17:00</div>
+            </div>
+        </section>
+        <button class="btn-agendar">Agendar</button>
+    </div>
+
+    <script src="~/js/agenda.js"></script>
+
+</body>
+</html>

@@ -44,6 +44,10 @@ namespace TempleOfInk.Controllers
         {
             return View();
         }
+        public IActionResult AgendaArtistas()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
